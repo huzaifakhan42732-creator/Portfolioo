@@ -1,0 +1,95 @@
+.contact-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contact-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 10px;
+  animation: fadeIn 1.5s ease;
+}
+
+.contact-subtitle {
+  color: #ccc;
+  font-size: 18px;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #00ffff;
+  background: rgba(0,0,0,0.5);
+  color: #ffffff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #bb00ff;
+  box-shadow: 0 0 20px #bb00ff;
+}
+
+.submit-btn {
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  background: #00ffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.submit-btn:hover {
+  background: #bb00ff;
+  color: #fff;
+  box-shadow: 0 0 30px #bb00ff, 0 0 50px #00ffff;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-title { font-size: 28px; }
+  .contact-subtitle { font-size: 16px; }
+}

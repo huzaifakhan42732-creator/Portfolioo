@@ -1,0 +1,99 @@
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0a0a0a, #000);
+  color: #fff;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  animation: fadeUp 1.5s ease;
+}
+
+/* Profile Image */
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 40px #00ffff, 0 0 60px #bb00ff;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px #bb00ff, 0 0 70px #00ffff;
+}
+
+/* Text */
+.header-text h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 50px;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #bb00ff;
+  margin-bottom: 15px;
+}
+
+.header-text h3 {
+  color: #bb00ff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.header-text p {
+  color: #ccc;
+  max-width: 600px;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+/* Scroll Down Arrow */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+}
+
+.scroll-down .arrow {
+  font-size: 32px;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #bb00ff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.scroll-down .arrow:hover {
+  color: #bb00ff;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-15px); }
+  60% { transform: translateX(-50%) translateY(-7px); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header-content { flex-direction: column; text-align: center; gap: 30px; }
+  .header-text h1 { font-size: 40px; }
+  .header-text h3 { font-size: 20px; }
+  .header-text p { font-size: 16px; }
+  .profile-pic { width: 200px; height: 200px; }
+}
