@@ -18,6 +18,9 @@
   flex-wrap: wrap;
   animation: fadeUp 1.5s ease;
 }
+/* Style for the bold name */
+
+
 
 /* Profile Image */
 .profile-pic {
@@ -96,4 +99,17 @@
   .header-text h3 { font-size: 20px; }
   .header-text p { font-size: 16px; }
   .profile-pic { width: 200px; height: 200px; }
+}
+p b {
+  color: #00ffff;           /* Neon cyan color */
+  font-weight: 700;         /* Bold */
+  font-family: 'Orbitron', sans-serif; /* Futuristic font */
+  text-shadow: 0 0 5px #00ffff, 0 0 15px #00ffff, 0 0 25px #00ffff;
+  transition: all 0.3s ease;
+}
+
+p b:hover {
+  color: #ff00ff;           /* Change color on hover */
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 35px #ff00ff;
+  transform: scale(1.05);
 }

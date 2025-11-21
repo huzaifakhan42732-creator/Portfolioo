@@ -13,9 +13,7 @@ const Header = () => {
           <h1>Welcome! 👋</h1>
           <h3>Creative Developer | Full Stack Developer | Visionary Thinker</h3>
           <p>
-            Hi, I’m <b>Huzaifa KHAN</b> — turning complex ideas into elegant, functional,
-            and visually stunning websites. Combining design, cybersecurity, and logic
-            to craft secure and unforgettable experiences.
+            Hi, I’m <b>Huzaifa KHAN</b>  a creative Full Stack Developer turning ideas into elegant, functional, and visually stunning websites. I craft engaging digital experiences that leave a lasting impression.
           </p>
         </div>
       </div>
