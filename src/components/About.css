@@ -1,8 +1,7 @@
 /* 🌌 About Section */
-
 .about {
   min-height: 100vh;
-  padding: 120px 60px 60px;
+  padding: 120px 60px 60px; /* top/bottom 120px, left/right 60px */
   background: radial-gradient(circle at top left, #0a0a0a, #1b0033, #000);
   color: #ffffff;
   display: flex;
@@ -11,8 +10,9 @@
   position: relative;
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-sizing: border-box; /* ensures padding included in width */
 }
-
 
 /* Content Layout */
 .about-content {
@@ -21,6 +21,8 @@
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
+  max-width: 1200px; /* content won't stretch too much */
+  width: 100%;
   opacity: 0;
   transform: translateY(40px);
   transition: all 1.3s ease;
@@ -142,12 +144,24 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .about {
-    padding: 100px 30px 40px;
+    padding: 100px 40px 50px; /* more padding on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 80px 30px 40px;
   }
 
   .about-text p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 60px 20px 30px;
   }
 }
