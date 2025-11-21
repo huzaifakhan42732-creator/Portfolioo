@@ -122,7 +122,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1025px) {
+@media (max-width: 1335px) {
   .about-content {
     flex-direction: column;
     text-align: center;
