@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './About.css';
-import profilePic from '../assets/gcu.png';
+import profilePic from '../assets/first.jpg';
 
 const About = () => {
 
