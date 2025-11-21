@@ -1,6 +1,8 @@
+/* 🌌 About Section */
+
 .about {
   min-height: 100vh;
-  padding: 120px 60px 60px; /* top padding for navbar */
+  padding: 120px 60px 60px;
   background: radial-gradient(circle at top left, #0a0a0a, #1b0033, #000);
   color: #ffffff;
   display: flex;
@@ -11,6 +13,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 /* Content Layout */
 .about-content {
   display: flex;
@@ -18,10 +21,17 @@
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
-  animation: fadeUp 1.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.3s ease;
 }
 
-/* Profile Image (Optional) */
+.about-content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Profile Image */
 .about-pic {
   width: 260px;
   height: 260px;
@@ -40,7 +50,21 @@
 /* Text Section */
 .about-text {
   max-width: 700px;
-  animation: fadeIn 1.8s ease;
+}
+
+/* Headings */
+.about-text h1,
+.about-text h3 {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.about-text h1.animate {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.about-text h3.animate {
+  animation: fadeUp 1.5s ease forwards;
 }
 
 .about-text h1 {
@@ -58,6 +82,7 @@
   text-shadow: 0 0 15px #bb00ff;
 }
 
+/* Paragraph */
 .about-text p {
   color: #d9d9d9;
   line-height: 1.8;
@@ -68,24 +93,35 @@
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
 }
 
-/* Neon Animated Highlights for Keywords */
+/* Neon Highlight for <b> */
 .about-text p b {
   color: #00ffff;
   text-shadow: 0 0 8px #00ffff, 0 0 15px #bb00ff;
 }
 
-/* Animations */
-@keyframes fadeUp {
-  0% { opacity: 0; transform: translateY(60px); }
+/* Word-by-word animation */
+.about-text p span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.about-text p span.animate {
+  animation: wordFadeUp 0.5s forwards;
+}
+
+/* Keyframes */
+@keyframes wordFadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 900px) {
   .about-content {
     flex-direction: column;
@@ -110,5 +146,8 @@
   .about {
     padding: 100px 30px 40px;
   }
-}
 
+  .about-text p {
+    font-size: 16px;
+  }
+}
