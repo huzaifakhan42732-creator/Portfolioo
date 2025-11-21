@@ -1,8 +1,11 @@
 /* 🌌 About Section */
 .about {
-  min-height: 100vh;
-  padding: 120px 60px 60px; /* top/bottom 120px, left/right 60px */
+    min-height: 100vh;
+  padding: 120px 60px 60px;
   background: radial-gradient(circle at top left, #0a0a0a, #1b0033, #000);
+  background-size: cover; /* ensures gradient covers full container */
+  background-position: center; /* center the gradient */
+  background-repeat: no-repeat; /* prevent tiling */
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -11,7 +14,8 @@
   overflow: hidden;
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  box-sizing: border-box; /* ensures padding included in width */
+  box-sizing: border-box;
+
 }
 
 /* Content Layout */
